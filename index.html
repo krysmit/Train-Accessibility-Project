@@ -11,23 +11,46 @@
 
 <body>
 
-    <div class="box-size">
+    <div class="box-size" class="page1">
         <h1>Welcome</h1>
         <button type="button">Let's Go!</button>
     </div>
-    <div class="box-size">
+
+    <div class="box-size" class="page2">
         <h2>Do we have permission to get your location to find the nearest accessible train stations in your zipcode?</h2>
         <button>No</button>
         <button>Yes</button>
         <!--Current time and date?-->
     </div>
-    <div class="box-size">
+
+    <div class="box-size" class="page3">
+        <h2>What line are you taking?</h2>
+        <!--Drop down menu for choosing the CTA Train Line-->
+        <form action="#"> <!-- Need to connect to an action, possible JS page?-->
+        <label for="cars">Choose a car:</label>
+        <select name="ctaTrain" id="ctaLineOptions">
+        <option value="redL">Red Line</option>
+        <option value="blueL">Blue Line</option>
+        <option value="brownL">Brown Line</option>
+        <option value="greenL">Green Line</option>
+        <option value="orangeL">Orange Line</option>
+        <option value="yellowL">Yellow Line</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+        </form>
+
+    </div>
+
+
+    <div class="box-size" class="page4">
         <h3 class="textsizer">What zipcode are you heading to?</h3>
         <input type="text" placeholder="Enter Zip Code Here"></input>
         <button>Submit</button>
         <!--Current time and date?-->
     </div>
-    <div class="box-size">
+
+    <div class="box-size" class="page4">
         <h4>Nearby information</h3>
         <h4>Destination information</h4>
         <!--Current time and date?-->
