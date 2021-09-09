@@ -22,6 +22,7 @@
 // <---------------------------------Another Option------------------------------->
 // This option is connected to a button on the HTML side.
 // Reference this code on mozzila @ https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples
+// Hopefully one of these works.
 
 function geoFindMe() {
 
