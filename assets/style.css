@@ -5,6 +5,12 @@ h1 {
     text-align: center;
 }
 
+header {
+    background-image: url("trains1.jpg");
+    
+
+}
+
 
 p {
     text-align: center;
@@ -13,7 +19,7 @@ p {
 
 h2 {
     text-align: center;
-    margin-top: -140px;
+    margin-top: -10px;
 }
 
 h3 {
@@ -39,7 +45,7 @@ h4 {
 
 }
 #lets-go {
-    margin-left: 125px;
+    margin-right: 200px;
     margin-top: 80px;
     background-color: rgb(136, 247, 255);
     color: rgb(3, 2, 2);
