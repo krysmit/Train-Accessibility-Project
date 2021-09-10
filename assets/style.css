@@ -19,9 +19,11 @@ h1 {
 } */
 
 #letsGoBtn {
+    display: block;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     border: 10px black;
-    padding: 45px;
     background-color:rgb(136, 247, 255);
     
 }
@@ -58,34 +60,32 @@ h1 {
 }
 
 .dropPgTitle {
-    padding-top: 60px;
+    padding-top: 30px;
 }
 
 .box-size {
     align-self: center;
     border-style: solid;
     border-color: black;
-    padding-top: 80px;
-    padding-right: 200px;
-    padding-left: 200px;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
     margin: 15px;
     height: 450px;
 }
 
 .partyButtons {
+    display: block;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     border: 5px black;
-    padding: 15px;
     background-color:rgb(136, 247, 255);
-    color: black 10px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 500px) {
     body {
-      background: var(--primary-color);
-      padding-right: 10px;
-      padding-left: 10px;
-      padding-top: 10px;
+      background-color: burlywood;
 
     }
   }
