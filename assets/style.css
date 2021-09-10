@@ -1,6 +1,11 @@
 :root {
     --primary-color: royalblue;
     --secondary-color: slategray;
+    --third-color: rgb(136, 247, 255);
+}
+
+* {
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 h1 {
@@ -8,15 +13,19 @@ h1 {
     text-align: center;
 }
 
-.pageTitle {
-    text-align: center;
-    font-size: 30px;
+h5,
+h6 {
+    margin: 0px;
+    height: 10px;
 }
 
-/* p {
+p {
     text-align: center;
-    font-size: 20px;
-} */
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+    height: 10px;
+}
 
 #letsGoBtn {
     display: block;
@@ -25,6 +34,7 @@ h1 {
     border-radius: 50%;
     border: 10px black;
     background-color:rgb(136, 247, 255);
+    font-size: 20px;
     
 }
 
@@ -36,13 +46,17 @@ h1 {
     font-size: 25px;
 }
 
-#destination {
-    margin-left: 65px;
+.pageTitle {
+    text-align: center;
+    font-size: 30px;
 }
 
-#sub {
-    background-color: rgba(179, 255, 229, 0.226);
-    color: black;
+.locationBtn {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    color: white;
+    background-color:black;
 }
 
 .pageTitle {
@@ -50,28 +64,28 @@ h1 {
     font-size: 30px;
 }
 
-.page2,
-.page3,
-.page4,
-.page5 {
-    text-align: center;
-    font-size: 20px;
-
-}
-
 .dropPgTitle {
     padding-top: 30px;
 }
 
 .box-size {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-self: center;
     border-style: solid;
     border-color: black;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-right: 10px;
     padding-left: 10px;
-    margin: 15px;
-    height: 450px;
+    padding-bottom: 20px;
+    height: 500px;
+    background-color: white;
+    /* position absolute will allow all pages to stack
+    on top of eachother once we have buttons ready to 
+    navigate between pages - at that time
+    please delete this note */
+    /* position: absolute; */
 }
 
 .partyButtons {
@@ -83,9 +97,10 @@ h1 {
     background-color:rgb(136, 247, 255);
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 600px) {
     body {
-      background-color: burlywood;
-
+        /*background color is temporary. showing media q responsiveness*/
+      background-color:burlywood;
     }
+
   }
