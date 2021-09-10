@@ -7,6 +7,7 @@ var noButton = document.getElementById('nobtn');
 var yesButton = document.getElementById('yesbtn');
 var h3Text = document.getElementById('h3text');
 var subButton = document.getElementById('subbtn');
+var subButton = document.getElementById('zip');
 var nearInfo = document.getElementById('nearinfo');
 var destInfo = document.getElementById('destinfo');
 
@@ -17,6 +18,12 @@ var destInfo = document.getElementById('destinfo');
 window.onload = function() {
     document.getElementById('perm').style.display = 'none';
     document.getElementById('nobtn').style.display = 'none';
+    document.getElementById('zip').style.display = 'none';
+    document.getElementById('yesbtn').style.display = 'none';
+   // document.getElementById('subbtn').style.display = 'none';
+    document.getElementById('h3text').style.display = 'none';
+    document.getElementById('nearinfo').style.display = 'none';
+    document.getElementById('destinfo').style.display = 'none';
 
 
 
@@ -29,7 +36,7 @@ window.onload = function() {
           return;
         }
         function success(position) {
-          var latitude  = position.coords.latitude;
+          var latitude  = position.coords.latitude; 
           var longitude = position.coords.longitude;
           reverseGeocodingWithGoogle(longitude, latitude);
           console.log(reverseGeocodingWithGoogle(longitude, latitude));
@@ -40,7 +47,31 @@ window.onload = function() {
         navigator.geolocation.getCurrentPosition(success, error);
       }
 
+
+
+
+
+      function getApi(queryURL)
+
+      fetch(queryURL)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+
+
+
+
+
+      })
+
+
+
+
+
+
+
       geoFindMe();
+
 // fetch (queryURL) {
     
 // }
