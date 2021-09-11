@@ -13,31 +13,32 @@
 
     <div class="box-size" class="page1">
         <h1 class="pageTitle">Welcome, Urban Traveler!</h1>
+        <p>Here at CWP, we strive to find the most accessible train station to fit your needs.</p>
         <button type="button" id="letsGoBtn">Let's Go Somewhere!</br>>>>>></button>
     </div>
 
     <div class="box-size" class="page2">
-        <h2 class="pageTitle">Do we have permission to get your location to find the nearest accessible train stations in your zipcode?</h2>
-        <button>No</button>
-        <button id = "find-me">Show my location</button><br/>
+        <h2 class="pageTitle" class="pageTitle">Do we have permission to get your location to find the nearest accessible train stations in your zipcode?</h2>
+        <button class="locationBtn" id = "noLocation">No</button>
+        <button class="locationBtn" id = "find-me">Show my location</button><br/>
         <p id = "status"></p>
         <a id = "map-link" target="_blank"></a> 
         <!--Current time and date?-->
     </div>
 
     <div class="box-size" class="page3">
-        <h3 class="pageTitle" class="dropPgTitle">What line are you taking?</h3>
+        <h3 class="dropPgTitle">What line are you taking?</h3>
         <!--Drop down menu for choosing the CTA Train Line-->
         <form action="#"> <!-- Need to connect to an action, possible JS page?-->
         <label for="ctaOptions"></label>
         <select name="ctaTrain" id="ctaLineOptions">
         <option value="redL">Red Line</option>
-        <option value="blueL">Blue Line</option>
-        <option value="brownL">Brown Line</option>
-        <option value="greenL">Green Line</option>
-        <option value="orangeL">Orange Line</option>
-        <option value="yellowL">Yellow Line</option>
-        <option value="pinkL">Pink Line</option>
+        <option value="blueL">Blue Line (Coming Soon!)</option>
+        <option value="brownL">Brown Line (Coming Soon!)</option>
+        <option value="greenL">Green Line (Coming Soon!)</option>
+        <option value="orangeL">Orange Line (Coming Soon!)</option>
+        <option value="yellowL">Yellow Line (Coming Soon!)</option>
+        <option value="pinkL">Pink Line (Coming Soon!)</option>
         </select>
         <br><br>
         <input type="submit" value="Next" class="partyButtons" id="nextBtn">
