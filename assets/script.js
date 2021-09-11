@@ -25,7 +25,6 @@
 // Hopefully one of these works.
 
 
-
 var welcomeTitle = $('#welcome');
 var goButton = $('#lets-go');
 var permText = $('#perm');
