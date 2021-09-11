@@ -32,8 +32,8 @@ var permText = $('#perm');
 var noButton = $('#nobtn');
 var yesButton = $('#yesbtn');
 var h3Text = $('#h3text');
-var submitButton = $('#subbtn');
-var getZip = $('input[name="zipcode"]').val();
+var submitButton = $('#submitBtn');
+var userOption = $('#ctaStationOptions').val();
 var nearInfo = $('#nearinfo');
 var destInfo = $('#destinfo');
 
@@ -47,7 +47,6 @@ window.onload = function() {
     document.getElementById('nobtn').style.display = 'none';
     document.getElementById('zip').style.display = 'none';
     document.getElementById('yesbtn').style.display = 'none';
-   // document.getElementById('subbtn').style.display = 'none';
     document.getElementById('h3text').style.display = 'none';
     document.getElementById('nearinfo').style.display = 'none';
     document.getElementById('destinfo').style.display = 'none';
@@ -91,49 +90,37 @@ document.querySelector('#find-me').addEventListener('click', geoFindMe);
 
 
 
-      function subButton(event) {
-        event.preventDefault();
-  
-        var getZip = $('input[name="zipcode"]').val();
-        console.log(getZip);
-  
-        if (!getZip) {
-            return;
-        }
-  
-        
-  
-  
-    }
-  
-  
-  function getApi() {
-  
-     var queryURL = 'http://www.transitchicago.com/api/1.0/routes.aspx?outputType=JSON';
-  
-    fetch(queryURL) 
-        
-  
-    
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        console.log(data);
-  
-      })
+function subButton(event) {
+  event.preventDefault();
+
+  var userOption = $('#ctaStationOptions').val();
+  console.log(userOption);
+
+  if (!userOption) {
+      return;
   }
+
   
-      submitButton.on('click', getApi);
+  // ?routeid=36&outputType=JSON
+
+}
+
+
+function getApi() {
+
+var queryURL = 'https://cors-anywhere.herokuapp.com/http://www.transitchicago.com/api/1.0/alerts.aspx?outputType=JSON';
+
+fetch(queryURL) 
   
 
 
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  console.log(data);
 
+})
+}
 
-
-
-      geoFindMe();
-
-// fetch (queryURL) {
-    
-// }
+submitButton.on('click', getApi);

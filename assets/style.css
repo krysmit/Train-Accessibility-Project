@@ -1,62 +1,106 @@
+:root {
+    --primary-color: royalblue;
+    --secondary-color: slategray;
+    --third-color: rgb(136, 247, 255);
+}
 
+* {
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
 
 h1 {
     font-size: 40px;
     text-align: center;
 }
 
-header {
-    background-image: url("trains1.jpg");
-    
-
+h5,
+h6 {
+    margin: 0px;
+    height: 10px;
 }
-
 
 p {
     text-align: center;
-    line-height: 200px;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+    height: 10px;
 }
 
-h2 {
-    text-align: center;
-    margin-top: -10px;
+#letsGoBtn {
+    display: block;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 10px black;
+    background-color:rgb(136, 247, 255);
+    font-size: 20px;
+    
 }
 
-h3 {
-    text-align: center;
-}
-
-h4 {
-    text-align: center;
-}
-
-
-#nobtn {
-    margin-left: 140px;
-}
-
-
-.box-s {
-    align-items: center;
-    border-style: solid;
-    border-color: black;
-    padding-top: 100px;
-
-
-}
 #lets-go {
-    margin-right: 200px;
+    margin-left: 125px;
     margin-top: 80px;
     background-color: rgb(136, 247, 255);
     color: rgb(3, 2, 2);
     font-size: 25px;
 }
 
-#destination {
-    margin-left: 65px;
+.pageTitle {
+    text-align: center;
+    font-size: 30px;
 }
 
-#sub {
-    background-color: rgba(179, 255, 229, 0.226);
-    color: black;
+.locationBtn {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    color: white;
+    background-color:black;
 }
+
+.pageTitle {
+    text-align: center;
+    font-size: 30px;
+}
+
+.dropPgTitle {
+    padding-top: 30px;
+}
+
+.box-size {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    border-style: solid;
+    border-color: black;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    height: 500px;
+    background-color: white;
+    /* position absolute will allow all pages to stack
+    on top of eachother once we have buttons ready to 
+    navigate between pages - at that time
+    please delete this note */
+    /* position: absolute; */
+}
+
+.partyButtons {
+    display: block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px black;
+    background-color:rgb(136, 247, 255);
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        /*background color is temporary. showing media q responsiveness*/
+      background-color:burlywood;
+    }
+
+  }
