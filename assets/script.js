@@ -70,6 +70,15 @@ function geoFindMe() {
     status.textContent = '';
     mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
     mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+
+    //STORING LAT LONG AND RETRIEVING LAT/LONG - IT WORKS!!!
+    var latLongStore = { 'latitude': latitude, 'longitude': longitude };
+    // This puts the object into storage
+    localStorage.setItem('latLongStore', JSON.stringify(latLongStore));
+    // RThis retrieves the object from storage
+    var retrievedObject = localStorage.getItem('latLongStore');
+    console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
   }
 
   function error() {
