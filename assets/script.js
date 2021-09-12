@@ -24,36 +24,10 @@
 // Reference this code on mozzila @ https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples
 // Hopefully one of these works.
 
-// These vars are causing errors in the console. We need to look into that later.
-// var welcomeTitle = $('#welcome');
-// var goButton = $('#lets-go');
-// var permText = $('#perm');
-// var noButton = $('#nobtn');
-// var yesButton = $('#yesbtn');
-// var h3Text = $('#h3text');
-// var submitButton = $('#submitBtn');
-// var userOption = $('#ctaStationOptions').val();
-// var nearInfo = $('#nearinfo');
-// var destInfo = $('#destinfo');
 
 
-
-
-
-
-window.onload = function() {
-  //These are also causing console errors.
-    // document.getElementById('perm').style.display = 'none';
-    // document.getElementById('nobtn').style.display = 'none';
-    // document.getElementById('zip').style.display = 'none';
-    // document.getElementById('yesbtn').style.display = 'none';
-    // document.getElementById('h3text').style.display = 'none';
-    // document.getElementById('nearinfo').style.display = 'none';
-    // document.getElementById('destinfo').style.display = 'none';
-
-
-}
-
+var submitButton = $('#submitBtn');
+var userOption = $('#ctaStationOptions').val();
 
 
 function geoFindMe() {
@@ -109,10 +83,8 @@ function subButton(event) {
       return;
   }
 
-  
-  // ?routeid=36&outputType=JSON
 
-}
+};
 
 
 function getApi() {
@@ -130,9 +102,34 @@ fetch(queryURL)
   console.log(data);
 
 })
-}
+};
 
-// This is causing console errors
-// submitButton.on('click', getApi);
+submitButton.on('click', getApi);
 
-// testing
+
+
+$.ajax({
+  url: "https://data.cityofchicago.org/resource/8pix-ypme.json?red=true",
+  type: "GET",
+  data: {
+    "$limit" : 5000,
+    //"$red": true,
+    "$$app_token" : "qZrCvWmumZjN79dBFQ9ODzYH8"
+  }
+}).then(function(data){
+    var appendHTML = "";
+
+    appendHTML += `<div id="nearInfo">
+      <h7>${data.ada}</h7>
+    </div>`
+
+$("#nearInfo").append(appendHTML)
+
+});
+
+
+// .done(function(data) {
+// // Take out ALERT below before FINAL PROJECT!!!!!
+// alert("Retrieved " + data.length + " records from the dataset!");
+// console.log(data);
+// });
