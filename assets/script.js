@@ -24,17 +24,17 @@
 // Reference this code on mozzila @ https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples
 // Hopefully one of these works.
 
-
-var welcomeTitle = $('#welcome');
-var goButton = $('#lets-go');
-var permText = $('#perm');
-var noButton = $('#nobtn');
-var yesButton = $('#yesbtn');
-var h3Text = $('#h3text');
-var submitButton = $('#submitBtn');
-var userOption = $('#ctaStationOptions').val();
-var nearInfo = $('#nearinfo');
-var destInfo = $('#destinfo');
+// These vars are causing errors in the console. We need to look into that later.
+// var welcomeTitle = $('#welcome');
+// var goButton = $('#lets-go');
+// var permText = $('#perm');
+// var noButton = $('#nobtn');
+// var yesButton = $('#yesbtn');
+// var h3Text = $('#h3text');
+// var submitButton = $('#submitBtn');
+// var userOption = $('#ctaStationOptions').val();
+// var nearInfo = $('#nearinfo');
+// var destInfo = $('#destinfo');
 
 
 
@@ -42,13 +42,14 @@ var destInfo = $('#destinfo');
 
 
 window.onload = function() {
-    document.getElementById('perm').style.display = 'none';
-    document.getElementById('nobtn').style.display = 'none';
-    document.getElementById('zip').style.display = 'none';
-    document.getElementById('yesbtn').style.display = 'none';
-    document.getElementById('h3text').style.display = 'none';
-    document.getElementById('nearinfo').style.display = 'none';
-    document.getElementById('destinfo').style.display = 'none';
+  //These are also causing console errors.
+    // document.getElementById('perm').style.display = 'none';
+    // document.getElementById('nobtn').style.display = 'none';
+    // document.getElementById('zip').style.display = 'none';
+    // document.getElementById('yesbtn').style.display = 'none';
+    // document.getElementById('h3text').style.display = 'none';
+    // document.getElementById('nearinfo').style.display = 'none';
+    // document.getElementById('destinfo').style.display = 'none';
 
 
 }
@@ -70,6 +71,15 @@ function geoFindMe() {
     status.textContent = '';
     mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
     mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+
+    //STORING LAT LONG AND RETRIEVING LAT/LONG - IT WORKS!!!
+    var latLongStore = { 'latitude': latitude, 'longitude': longitude };
+    // This puts the object into storage
+    localStorage.setItem('latLongStore', JSON.stringify(latLongStore));
+    // RThis retrieves the object from storage
+    var retrievedObject = localStorage.getItem('latLongStore');
+    console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
   }
 
   function error() {
@@ -122,6 +132,7 @@ fetch(queryURL)
 })
 }
 
-submitButton.on('click', getApi);
+// This is causing console errors
+// submitButton.on('click', getApi);
 
 // testing
