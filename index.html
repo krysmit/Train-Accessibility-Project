@@ -13,22 +13,25 @@
 
     <div class="box-size" class="page1">
         <h1 class="pageTitle">Welcome, Urban Traveler!</h1>
-        <p>Here at CWP, we strive to find the most accessible train station to fit your needs.</p>
+        <p>Here at CWP, we strive to find the most accessible train station to fit your needs.</p></br></br>
         <button type="button" id="letsGoBtn">Let's Go Somewhere!</br>>>>>></button>
     </div>
 
     <div class="box-size" class="page2">
-        <h2 class="pageTitle" class="pageTitle">Do we have permission to get your location to find the nearest accessible train stations in your zipcode?</h2>
+        <h2 class="pageTitle">Do we have permission to get your location to find the nearest accessible train stations in your zipcode?</h2>
+    <div id="centralAlign">
         <button class="locationBtn" id = "noLocation">No</button>
         <button class="locationBtn" id = "find-me">Show my location</button><br/>
+     </div>
         <p id = "status"></p>
         <a id = "map-link" target="_blank"></a> 
         <!--Current time and date?-->
     </div>
 
     <div class="box-size" class="page3">
-        <h3 class="dropPgTitle">What line are you taking?</h3>
+        <h3 class="pageTitle">What line are you taking?</h3>
         <!--Drop down menu for choosing the CTA Train Line-->
+        <div id="centralAlign">
         <form action="#"> <!-- Need to connect to an action, possible JS page?-->
         <label for="ctaOptions"></label>
         <select name="ctaTrain" id="ctaLineOptions">
@@ -43,61 +46,63 @@
         <br><br>
         <input type="submit" value="Next" class="partyButtons" id="nextBtn">
         </form>
-
+        </div>
     </div>
 
 
     <div class="box-size" class="page4">
-        <h4 class="pageTitle" class="dropPgTitle">What station are you going to?</h4>
-<!--Drop down menu for choosing train station-->
-<form action="#"> <!-- Need to connect to an action, possible JS page?-->
-    <label for="ctaStationOptions"></label>
-    <select name="ctaStation" id="ctaStationOptions">
-    <option value="Howard">Howard</option>
-    <option value="Jarvis">Jarvis</option>
-    <option value="Morse">Morse</option>
-    <option value="Loyola">Loyola</option>
-    <option value="Granville">Granville</option>
-    <option value="Thorndale">Thorndale</option>
-    <option value="Bryn Mawr">Bryn Mawr</option>
-    <option value="Berwyn">Berwyn</option>
-    <option value="Argyle">Argyle</option>
-    <option value="Lawrence">Lawrence</option>
-    <option value="Wilson">Wilson</option>
-    <option value="Sheridan">Sheridan</option>
-    <option value="Addison">Addison</option>
-    <option value="Belmont">Belmont</option>
-    <option value="Fullerton">Fullerton</option>
-    <option value="Noth/Clybourn">Noth/Clybourn</option>
-    <option value="Clark/Division">Clark/Division</option>
-    <option value="Chicago">Chicago</option>
-    <option value="Chicago">Chicago</option>
-    <option value="Lake">Lake</option>
-    <option value="Monroe">Monroe</option>
-    <option value="Jackson">Jackson</option>
-    <option value="Harrison">Harrison</option>
-    <option value="Roosevelt">Roosevelt</option>
-    <option value="Cermak-Chinatown">Cermak-Chinatown</option>
-    <option value="Sox-35th">Sox-35th</option>
-    <option value="47th">47th</option>
-    <option value="Garfield">Garfield</option>
-    <option value="63rd">63rd</option>
-    <option value="69th">69th</option>
-    <option value="79th">79th</option>
-    <option value="87th">87th</option>
-    <option value="95th-Dan Ryan">95th/Dan Ryan</option>
-    </select>
-    <br><br>
-    <input type="submit" value="Submit" class="partyButtons" id="submitBtn">
-    </form>
+        <h4 class="pageTitle">What station are you going to?</h4>
+    <!--Drop down menu for choosing train station-->
+    <div id="centralAlign">
+        <form action="#"> <!-- Need to connect to an action, possible JS page?-->
+        <label for="ctaStationOptions"></label>
+        <select name="ctaStation" id="ctaStationOptions">
+        <option value="Howard">Howard</option>
+        <option value="Jarvis">Jarvis</option>
+        <option value="Morse">Morse</option>
+        <option value="Loyola">Loyola</option>
+        <option value="Granville">Granville</option>
+        <option value="Thorndale">Thorndale</option>
+        <option value="Bryn Mawr">Bryn Mawr</option>
+        <option value="Berwyn">Berwyn</option>
+        <option value="Argyle">Argyle</option>
+        <option value="Lawrence">Lawrence</option>
+        <option value="Wilson">Wilson</option>
+        <option value="Sheridan">Sheridan</option>
+        <option value="Addison">Addison</option>
+        <option value="Belmont">Belmont</option>
+        <option value="Fullerton">Fullerton</option>
+        <option value="Noth/Clybourn">Noth/Clybourn</option>
+        <option value="Clark/Division">Clark/Division</option>
+        <option value="Chicago">Chicago</option>
+        <option value="Chicago">Chicago</option>
+        <option value="Lake">Lake</option>
+        <option value="Monroe">Monroe</option>
+        <option value="Jackson">Jackson</option>
+        <option value="Harrison">Harrison</option>
+        <option value="Roosevelt">Roosevelt</option>
+        <option value="Cermak-Chinatown">Cermak-Chinatown</option>
+        <option value="Sox-35th">Sox-35th</option>
+        <option value="47th">47th</option>
+        <option value="Garfield">Garfield</option>
+        <option value="63rd">63rd</option>
+        <option value="69th">69th</option>
+        <option value="79th">79th</option>
+        <option value="87th">87th</option>
+        <option value="95th-Dan Ryan">95th/Dan Ryan</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit" class="partyButtons" id="submitBtn">
+        </form>
+    </div>
         <!--Current time and date?-->
     </div>
     <div class="box-size" class="page5">
         <h5 class="pageTitle">Nearby information</h5>
-        <p>The most accessible station near you is:</p>
+        <p class="introInfo">The most accessible station near you is:</p></br>
             <div id="nearInfo"></div>
         <h6 class="pageTitle">Destination information</h6>
-        <p>Information on your destination station:</p>
+        <p class="introInfo">Information on your destination station:</p>
             <div id="destinationInfo"></div>
         <!--Current time and date?-->
     </div>
