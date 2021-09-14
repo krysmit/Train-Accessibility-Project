@@ -44,6 +44,18 @@ p {
     align-self: center;
 }
 
+/*COMMENT BACK IN TO HIDE PAGES
+#pagetwo,
+#pagethree,
+#pagefour,
+#pagefive {
+    display:none;
+} */
+
+.astrisk {
+    font-size: 15px;
+}
+
 .pageTitle {
     text-align: center;
     font-size: 30px;
@@ -100,6 +112,7 @@ p {
     .box-size {
         display: flex;
         flex-direction: column;
+        width: 90%;
     }
 
   }
