@@ -1,40 +1,8 @@
-// <-------------------------------Geo Location Script--------------------------------->
-
-// const successCallback = (position) => {
-//     console.log(position)
-// };
-
-// const errorCallback = (errorCallback) => {
-//     console.log(position)
-// };
-
-// navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
-//     enableHighAccuracy: true,
-//     timeout: 5000, //it is in milliseconds
-// });
-
-// watchId allows to keep updating the USER's location as they walk around
-// const watchId = navigator.geolocation.watchPosition(successCallback, errorCallback);
-
-// To stop watching location use the one below
-// navigator.geolocation.clearWatch(watchId);
-
-// <---------------------------------Another Option------------------------------->
-// This option is connected to a button on the HTML side.
-// Reference this code on mozzila @ https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples
-// Hopefully one of these works.
-
-
 var submitButton = $('#submitBtn');
 var userOption = $('#ctaStationOptions').val();
 var nearInfo = $('#nearInfo');
 var destInfo = $('destinationInfo');
 
-
-
-
-
-//HIDE PAGES CODE - COMMENT BACK IN ONCE READY TO HIDE PAGES
 var page2 = $("#pagetwo");
 var page3 = $("#pagethree");
 var page4 = $("#pagefour");
@@ -45,25 +13,20 @@ $(document).ready(function(){
       $("#pagetwo").fadeToggle();
   });
 });
-
 $(document).ready(function(){
   $("#nextLocBtn").click(function(){
       $("#pagethree").fadeToggle();
   });
 });
-
 $(document).ready(function(){
   $("#nextBtn").click(function(){
       $("#pagefour").fadeToggle();
   });
 });
-
 $(document).ready(function(){
-  $("submitBtn").click(function(){
-      $("#pagefive").fadeToggle();
+  $("theFinalBtn").click(function(){
   });
 });
-
 
 
 
@@ -124,12 +87,6 @@ function getApi(queryURL) {
 
  localStorage.setItem('ctaStation', listOption);
 
- // for (i=0; i<optionForm.length; i++) {
- //  if (optionForm === true) {
- //    optionForm.append(listOption);
- //  }
- // }
- 
 var queryURL = 'https://cors-anywhere.herokuapp.com/http://www.transitchicago.com/api/1.0/routes.aspx?&outputType=JSON';
 
 fetch(queryURL) 
@@ -145,30 +102,14 @@ fetch(queryURL)
 
  for (var i = 0; i < 66; i++) {
 
-
  }
-
-
-
 
  var nextBtn = $('#nextBtn');
  var nearInfo = $('#nearInfo');
 
- //var stationName = data[0]['stop_name'];
-
  nearInfo.html(listOption);
- //destInfo.html('stop_name');
-// nearInfo.html()
-// destInfo.html(stationName);
-
-
-
- 
- 
- 
  
  console.log(data);
-
 
 })
 
@@ -184,7 +125,6 @@ $.ajax({
  type: "GET",
  data: {
    "$limit" : 5000,
-   //"$red": true,
    "$$app_token" : "qZrCvWmumZjN79dBFQ9ODzYH8"
  }
 
@@ -216,18 +156,6 @@ var closest = data[0];
 destInfo.append(appendHTML)
 
 });
-
-
-
-
-
-// .done(function(data) {
-// //Take out ALERT below before FINAL PROJECT!!!!!
-// alert("Retrieved " + data.length + " records from the dataset!");
-// console.log("list of red line stations: ", data);
-// });
-
-
 
 
 
@@ -274,35 +202,3 @@ var settings = {
   "method": "GET"
 }
 
-
-
-
-
-// var currentStations = document.querySelector('#nearInfo');
-
-
-
-
-
-
-$.ajax(settings).done(function (response) {
-  console.log(response);
-  // var content = response.station_descriptive_name;
-  
-  var currentStations = response.station_name[0].main;
-  
-  // $("#nearInfo").append(nearInfo);
-
-  // $("#nearInfo").append(content);
-
-});
-
-
-
-
-
-
-
-var content = 'Station :'+data.station_name ;
-content += 'Stop : '+data.stop_name ;
-// $("#nearInfo").append(content);
