@@ -16,9 +16,12 @@ h1 {
 p {
     text-align: center;
     font-size: 15px;
-    padding: 0px;
+    /* padding: 0px;
     margin: 0px;
-    height: 10px;
+    height: 10px; */
+    background-color:linen;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 #letsGoBtn {
@@ -59,6 +62,9 @@ p {
 .pageTitle {
     text-align: center;
     font-size: 30px;
+    background-color:linen;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .locationBtn {
@@ -81,7 +87,9 @@ p {
     padding-left: 30px;
     padding-bottom: 20px;
     height: 500px;
-    background-color: white;
+    background-image: url("https://news.wttw.com/sites/default/files/styles/full/public/article/image-non-gallery/CTA_Station_FILE.jpg?itok=OV3sbNmT");
+    background-repeat: no-repeat;
+    background-position: center;
     /* position absolute will allow all pages to stack
     on top of eachother once we have buttons ready to 
     navigate between pages - at that time
