@@ -44,6 +44,17 @@ p {
     align-self: center;
 }
 
+#pagetwo,
+#pagethree,
+#pagefour,
+#pagefive {
+    display:none;
+}
+
+.astrisk {
+    font-size: 15px;
+}
+
 .pageTitle {
     text-align: center;
     font-size: 30px;
@@ -74,7 +85,7 @@ p {
     on top of eachother once we have buttons ready to 
     navigate between pages - at that time
     please delete this note */
-    /* position: absolute; */
+    position: absolute;
 }
 
 .introInfo {
@@ -100,6 +111,7 @@ p {
     .box-size {
         display: flex;
         flex-direction: column;
+        width: 90%;
     }
 
   }

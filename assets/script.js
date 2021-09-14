@@ -30,6 +30,39 @@ var submitButton = $('#submitBtn');
 var userOption = $('#ctaStationOptions').val();
 
 
+//HIDE PAGES CODE
+var page2 = $("#pagetwo");
+var page3 = $("#pagethree");
+var page4 = $("#pagefour");
+var page5 = $("#pagefive");
+
+$(document).ready(function(){
+  $("#letsGoBtn").click(function(){
+      $("#pagetwo").fadeToggle();
+  });
+});
+
+$(document).ready(function(){
+  $("#nextLocBtn").click(function(){
+      $("#pagethree").fadeToggle();
+  });
+});
+
+$(document).ready(function(){
+  $("#nextBtn").click(function(){
+      $("#pagefour").fadeToggle();
+  });
+});
+
+$(document).ready(function(){
+  $("submitBtn").click(function(){
+      $("#pagefive").fadeToggle();
+  });
+});
+
+
+
+
 function geoFindMe() {
 
   const status = document.querySelector('#status');
