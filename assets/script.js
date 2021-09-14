@@ -103,7 +103,7 @@ function geoFindMe() {
 }
 
 document.querySelector('#find-me').addEventListener('click', geoFindMe);
-
+*/
 
 
 function subButton(event) {
@@ -141,7 +141,7 @@ submitButton.on('click', getApi);
 
 
 
-$.ajax({
+/* $.ajax({
   url: "https://data.cityofchicago.org/resource/8pix-ypme.json?red=true",
   type: "GET",
   data: {
@@ -159,10 +159,78 @@ $.ajax({
 $("#nearInfo").append(appendHTML)
 
 });
-
+*/
 
 // .done(function(data) {
 // // Take out ALERT below before FINAL PROJECT!!!!!
 // alert("Retrieved " + data.length + " records from the dataset!");
 // console.log(data);
 // });
+
+fetch('https://data.cityofchicago.org/resource/8pix-ypme.json?red=true')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("nearInfo");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = 'Station: ' + data[i].station_descriptive_name + ' ' + data[i].stop_name;
+                mainContainer.appendChild(div);
+            }
+        }
+
+        let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 41.8781, lng: 87.6298 },
+    zoom: 8,
+    mapId: '9366335a8cabde1',
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://data.cityofchicago.org/resource/8pix-ypme.json?red=true",
+  "method": "GET"
+}
+
+// var currentStations = document.querySelector('#nearInfo');
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  // var content = response.station_descriptive_name;
+  
+  var currentStations = response.station_name[0].main;
+  
+  //$("#nearInfo").append(nearInfo);
+
+  //$("#nearInfo").append(content);
+});
+
+var content = 'Station :'+data.station_name ;
+content += 'Stop : '+data.stop_name ;
+$("#nearInfo").append(content);
+*/
