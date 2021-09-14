@@ -35,34 +35,34 @@ var destInfo = $('destinationInfo');
 
 
 //HIDE PAGES CODE - COMMENT BACK IN ONCE READY TO HIDE PAGES
-// var page2 = $("#pagetwo");
-// var page3 = $("#pagethree");
-// var page4 = $("#pagefour");
-// var page5 = $("#pagefive");
+var page2 = $("#pagetwo");
+var page3 = $("#pagethree");
+var page4 = $("#pagefour");
+var page5 = $("#pagefive");
 
-// $(document).ready(function(){
-//   $("#letsGoBtn").click(function(){
-//       $("#pagetwo").fadeToggle();
-//   });
-// });
+$(document).ready(function(){
+  $("#letsGoBtn").click(function(){
+      $("#pagetwo").fadeToggle();
+  });
+});
 
-// $(document).ready(function(){
-//   $("#nextLocBtn").click(function(){
-//       $("#pagethree").fadeToggle();
-//   });
-// });
+$(document).ready(function(){
+  $("#nextLocBtn").click(function(){
+      $("#pagethree").fadeToggle();
+  });
+});
 
-// $(document).ready(function(){
-//   $("#nextBtn").click(function(){
-//       $("#pagefour").fadeToggle();
-//   });
-// });
+$(document).ready(function(){
+  $("#nextBtn").click(function(){
+      $("#pagefour").fadeToggle();
+  });
+});
 
-// $(document).ready(function(){
-//   $("submitBtn").click(function(){
-//       $("#pagefive").fadeToggle();
-//   });
-// });
+$(document).ready(function(){
+  $("submitBtn").click(function(){
+      $("#pagefive").fadeToggle();
+  });
+});
 
 
 
@@ -243,7 +243,7 @@ fetch('https://data.cityofchicago.org/resource/8pix-ypme.json?red=true')
             });
         function appendData(data) {
             var mainContainer = document.getElementById("nearInfo");
-            for (var i = 0; i < data.length; i++) {
+            for (var i = 0; i < 3; i++) {
                 var div = document.createElement("div");
                 div.innerHTML = 'Station: ' + data[i].station_descriptive_name + ' ' + data[i].stop_name;
                 mainContainer.appendChild(div);

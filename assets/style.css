@@ -48,12 +48,12 @@ p {
 }
 
 /*COMMENT BACK IN TO HIDE PAGES*/
-/* #pagetwo,
+#pagetwo,
 #pagethree,
 #pagefour,
 #pagefive {
     display:none;
-}  */
+} 
 
 .astrisk {
     font-size: 15px;
@@ -94,7 +94,7 @@ p {
     on top of eachother once we have buttons ready to 
     navigate between pages - at that time
     please delete this note */
-    /* position: absolute; */
+    position: absolute;
 }
 
 .introInfo {
