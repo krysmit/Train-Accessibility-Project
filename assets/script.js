@@ -110,7 +110,6 @@ function geoFindMe() {
 document.querySelector('#find-me').addEventListener('click', geoFindMe);
 
 
-
 function subButton(event) {
  event.preventDefault();
 
