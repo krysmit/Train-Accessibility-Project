@@ -13,12 +13,6 @@ h1 {
     text-align: center;
 }
 
-h5,
-h6 {
-    margin: 0px;
-    height: 10px;
-}
-
 p {
     text-align: center;
     font-size: 15px;
@@ -32,10 +26,9 @@ p {
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    border: 10px black;
     background-color:rgb(136, 247, 255);
     font-size: 20px;
-    
+    align-self: center;    
 }
 
 #lets-go {
@@ -44,6 +37,23 @@ p {
     background-color: rgb(136, 247, 255);
     color: rgb(3, 2, 2);
     font-size: 25px;
+}
+
+#centralAlign {
+    display: flex;
+    align-self: center;
+}
+
+/*COMMENT BACK IN TO HIDE PAGES
+#pagetwo,
+#pagethree,
+#pagefour,
+#pagefive {
+    display:none;
+} */
+
+.astrisk {
+    font-size: 15px;
 }
 
 .pageTitle {
@@ -59,15 +69,6 @@ p {
     background-color:black;
 }
 
-.pageTitle {
-    text-align: center;
-    font-size: 30px;
-}
-
-.dropPgTitle {
-    padding-top: 30px;
-}
-
 .box-size {
     display: flex;
     flex-wrap: wrap;
@@ -76,8 +77,8 @@ p {
     border-style: solid;
     border-color: black;
     padding-top: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
     padding-bottom: 20px;
     height: 500px;
     background-color: white;
@@ -88,19 +89,44 @@ p {
     /* position: absolute; */
 }
 
+.introInfo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .partyButtons {
     display: block;
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    border: 5px black;
     background-color:rgb(136, 247, 255);
 }
 
 @media only screen and (min-width: 600px) {
     body {
-        /*background color is temporary. showing media q responsiveness*/
+    /*background color is temporary. showing media q responsiveness*/
       background-color:burlywood;
     }
 
+
+    .box-size {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
   }
+
+  /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+    height: 100%;
+  }
+  
+  /* Optional: Makes the sample page fill the window.
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }; */
