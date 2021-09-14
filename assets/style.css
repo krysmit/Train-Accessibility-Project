@@ -44,13 +44,13 @@ p {
     align-self: center;
 }
 
-/*COMMENT BACK IN TO HIDE PAGES
-#pagetwo,
+/*COMMENT BACK IN TO HIDE PAGES*/
+/* #pagetwo,
 #pagethree,
 #pagefour,
 #pagefive {
     display:none;
-} */
+}  */
 
 .astrisk {
     font-size: 15px;

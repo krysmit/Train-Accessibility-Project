@@ -108,7 +108,7 @@ function geoFindMe() {
 }
 
 document.querySelector('#find-me').addEventListener('click', geoFindMe);
-*/
+
 
 
 function subButton(event) {
@@ -154,7 +154,6 @@ fetch(queryURL)
 
  var nextBtn = $('#nextBtn');
  var nearInfo = $('#nearInfo');
- var destInfo = $('#destinationInfo');
 
  //var stationName = data[0]['stop_name'];
 
@@ -179,7 +178,6 @@ fetch(queryURL)
 
 submitButton.on('click', getApi);
 
-// testing
 
 
 $.ajax({
@@ -223,16 +221,17 @@ destInfo.append(appendHTML)
 
 
 
-//this is written out during the latest push - just commenting it out incase
-//OTHERWISE DELETE EVERYTHING BELOW
-
 
 // .done(function(data) {
-// // Take out ALERT below before FINAL PROJECT!!!!!
+// //Take out ALERT below before FINAL PROJECT!!!!!
 // alert("Retrieved " + data.length + " records from the dataset!");
-// console.log(data);
+// console.log("list of red line stations: ", data);
 // });
-/*
+
+
+
+
+
 fetch('https://data.cityofchicago.org/resource/8pix-ypme.json?red=true')
             .then(function (response) {
                 return response.json();
@@ -276,7 +275,16 @@ var settings = {
   "method": "GET"
 }
 
+
+
+
+
 // var currentStations = document.querySelector('#nearInfo');
+
+
+
+
+
 
 $.ajax(settings).done(function (response) {
   console.log(response);
@@ -284,12 +292,18 @@ $.ajax(settings).done(function (response) {
   
   var currentStations = response.station_name[0].main;
   
-  //$("#nearInfo").append(nearInfo);
+  // $("#nearInfo").append(nearInfo);
 
-  //$("#nearInfo").append(content);
+  // $("#nearInfo").append(content);
+
 });
+
+
+
+
+
+
 
 var content = 'Station :'+data.station_name ;
 content += 'Stop : '+data.stop_name ;
-$("#nearInfo").append(content);
-*/
+// $("#nearInfo").append(content);
