@@ -11,24 +11,25 @@
 
 <body>
 
-    <div class="box-size" class="page1">
+    <div class="box-size" class="page1" id="pageone">
         <h1 class="pageTitle">Welcome, Urban Traveler!</h1>
-        <p>Here at CWP, we strive to find the most accessible train station to fit your needs.</p></br></br>
+        <p>Here at CWS, we strive to find the most accessible train station to fit your needs.</p></br></br>
         <button type="button" id="letsGoBtn">Let's Go Somewhere!</br>>>>>></button>
     </div>
 
-    <div class="box-size" class="page2">
+    <div class="box-size" class="page2" id="pagetwo">
         <h2 class="pageTitle">Do we have permission to get your location to find the nearest accessible train stations in your zipcode?</h2>
-    <div id="centralAlign">
-        <button class="locationBtn" id = "noLocation">No</button>
+        <p id="astrisk">*Location is required to use this application.</p>
+        <div id="centralAlign">
         <button class="locationBtn" id = "find-me">Show my location</button><br/>
+        <button class="locationBtn" id = "nextLocBtn">Next</button>
      </div>
         <p id = "status"></p>
         <a id = "map-link" target="_blank"></a> 
         <!--Current time and date?-->
     </div>
 
-    <div class="box-size" class="page3">
+    <div class="box-size" class="page3" id="pagethree">
         <h3 class="pageTitle">What line are you taking?</h3>
         <!--Drop down menu for choosing the CTA Train Line-->
         <div id="centralAlign">
@@ -50,7 +51,7 @@
     </div>
 
 
-    <div class="box-size" class="page4">
+    <div class="box-size" class="page4" id="pagefour">
         <h4 class="pageTitle">What station are you going to?</h4>
     <!--Drop down menu for choosing train station-->
     <div id="centralAlign">
@@ -97,7 +98,7 @@
     </div>
         <!--Current time and date?-->
     </div>
-    <div class="box-size" class="page5">
+    <div class="box-size" class="page5" id="pagefive">
         <h5 class="pageTitle">Nearby information</h5>
         <p class="introInfo">The most accessible station near you is:</p></br>
             <div id="nearInfo"></div>
