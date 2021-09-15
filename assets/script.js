@@ -24,7 +24,8 @@ $(document).ready(function(){
   });
 });
 $(document).ready(function(){
-  $("theFinalBtn").click(function(){
+  $("#theFinalBtn").click(function(){
+  $("#pagefive").fadeToggle();
   });
 });
 
