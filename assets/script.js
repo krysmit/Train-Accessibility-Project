@@ -1,7 +1,7 @@
 var submitButton = $('#submitBtn');
 var userOption = $('#ctaStationOptions').val();
 var nearInfo = $('#nearInfo');
-var destInfo = $('destinationInfo');
+var destInfo = $('#destinationInfo');
 
 var page2 = $("#pagetwo");
 var page3 = $("#pagethree");
