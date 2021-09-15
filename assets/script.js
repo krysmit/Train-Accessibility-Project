@@ -142,7 +142,6 @@ $.ajax({
 
 var closest = data[0];
  for (var i = 0; i < 66; i++) {
-   //varconsole.log(data[i]);
    if (data[i].location.latitude - lat<closest.location.latitude - lat) {
      closest = data[i];
    }

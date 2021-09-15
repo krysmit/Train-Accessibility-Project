@@ -80,16 +80,14 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     align-self: center;
-    border-style: solid;
-    border-color: black;
+    /* border-style: solid;
+    border-color: black; */
     padding-top: 10px;
     padding-right: 30px;
     padding-left: 30px;
     padding-bottom: 20px;
     height: 500px;
-    background-image: url("https://news.wttw.com/sites/default/files/styles/full/public/article/image-non-gallery/CTA_Station_FILE.jpg?itok=OV3sbNmT");
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: white;
     /* position absolute will allow all pages to stack
     on top of eachother once we have buttons ready to 
     navigate between pages - at that time
@@ -111,11 +109,6 @@ p {
 }
 
 @media only screen and (min-width: 600px) {
-    body {
-    /*background color is temporary. showing media q responsiveness*/
-      background-color:burlywood;
-    }
-
 
     .box-size {
         display: flex;
@@ -124,17 +117,4 @@ p {
     }
 
   }
-
-  /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-#map {
-    height: 100%;
-  }
   
-  /* Optional: Makes the sample page fill the window.
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }; */
